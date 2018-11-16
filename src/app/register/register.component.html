@@ -1,0 +1,28 @@
+<div>
+  <form>
+    <h4>Register</h4>
+    UserName:
+    <input type="text" [(ngModel)]="username" name="username"><br>
+    Password:
+    <input type="password" [(ngModel)]="password" name="password"><br>
+    Confirm Password:
+    <input type="password" [(ngModel)]="confpassword" name="confirmpassword"><br>
+    <input type="checkbox" [(ngModel)]="acceptLicenceAgrument" name="acceptLicenceAgrument">
+    I accept license agreement<br>
+    Gender:
+    <input type="radio" [(ngModel)]="gender" value="male" name="gender">Male
+    <input type="radio" [(ngModel)]="gender" value="female" name="gender">Female
+    <br>
+    Country
+    <select [(ngModel)]="country" name="country">
+      <option>Select One</option>
+      <option>India</option>
+      <option>USA</option>
+      <option>UK</option>
+      <option>Pakestan</option>
+    </select>
+    <br>
+    <input type="submit" value="Register" (click)="Regestclick()"><br>
+    <div [innerHTML]='msg'></div>
+  </form>
+</div>
